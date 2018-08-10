@@ -20,7 +20,6 @@ http.createServer(function(req, res){
 
     // Returns an object of URL parameter-value pairs
     var params = q.query;
-    console.log('-- ' + params.server);
 
     // Load and render the html file
     fs.readFile('index.html', function(err, data){
