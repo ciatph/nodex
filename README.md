@@ -16,7 +16,10 @@ Read a file and upload it on server.
 5. **email.js**<br>
 Demo on sending email from nodejs
 
+6. **router-simple.js**<br>
+Creates a server and write an html page from a file. Parses the URL into parts. Implements simple routing: loads html file and external client-side javascript.
+
 ---
 
 **Date Created:** 20180811<br>
-**Date Modified:** 20180811
+**Date Modified:** 20180812
