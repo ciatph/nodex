@@ -1,6 +1,3 @@
-const functions = require('firebase-functions');
-const fs = require('fs');
-
 // // Create and Deploy Your First Cloud Functions
 // // https://firebase.google.com/docs/functions/write-firebase-functions
 //
@@ -8,9 +5,16 @@ const fs = require('fs');
 //  response.send("Hello from Firebase!");
 // });
 
+
+const functions = require('firebase-functions');
+const fs = require('fs');
+
+// Cheerio
+const cheerio = require('cheerio');
+
 exports.router = functions.https.onRequest((req, res) => {
     console.log('--url: ' + req.url);
-    
+
     // Default page
     var pageview = '../public/404.html';
 
@@ -31,7 +35,12 @@ exports.router = functions.https.onRequest((req, res) => {
             console.log('error: ' + err);
         }
 
+        // Replace default <p> contents
+        const $ = cheerio.load(data);
+        var text = $('#description').html('This page is loaded using <b>Firebase hosting rewrites</b> and functions (routing).');
+
+        // Send the modified value
         res.set('Content-Type', 'text/html');
-        res.send(data);
+        res.send($.html());
     });
 });
