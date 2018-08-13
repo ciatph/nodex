@@ -22,7 +22,7 @@ http.createServer(function(req, res){
     var params = q.query;
 
     // Load and render the html file
-    fs.readFile('index.html', function(err, data){
+    fs.readFile('./public/index.html', function(err, data){
         res.writeHead(200, {'Content-Type': 'text/html'});
         res.write(data);
         res.end();
