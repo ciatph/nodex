@@ -6,6 +6,8 @@ const http = require('http');
 const url = require('url');
 const fs = require('fs');
 
+const port = 8080;
+
 http.createServer(function(req, res){
     var q = url.parse(req.url);
 
@@ -27,4 +29,4 @@ http.createServer(function(req, res){
         res.write(data);
         res.end();
     });
-}).listen(8080);
+}).listen(port, () => console.log(`Listening on port http://localhost:${port}`));
