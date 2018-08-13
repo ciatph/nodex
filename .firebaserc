@@ -1,0 +1,5 @@
+{
+  "projects": {
+    "default": "webappsportal-demo" // <YOUR_FIREBASE_PROJECT_HERE>
+  }
+}

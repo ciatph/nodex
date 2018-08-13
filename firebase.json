@@ -1,0 +1,23 @@
+{
+  "functions": {
+    "predeploy": [
+      "npm --prefix \"$RESOURCE_DIR\" run lint"
+    ],
+    "source": "functions"
+  },
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    // Firebase hosting rewrites (routes) that redirect static files fetching from firebase functions
+    // source: url parameter, function: name of firebase functions
+    "rewrites": [
+      {"source": "/wizard", "function": "router"},
+      {"source": "/knight", "function": "router"},
+      {"source": "/elf", "function": "router"}
+    ]
+  }
+}
