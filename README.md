@@ -40,20 +40,21 @@ NodeJS is also used for Firebase's cloud functions and it can also be extended t
 ### Methods
 
 1. Clone this repository into your PC.
-2. Delete `.firebaserc`
-3. Login to your firebase account using the firebase cli (from the command line).
-4. Initialize the local hosting project. See [
+2. Run `npm install`.
+3. Delete `.firebaserc`
+4. Login to your firebase account using the firebase cli (from the command line).
+5. Initialize the local hosting project. See [
 Get Started with Firebase Hosting](https://firebase.google.com/docs/hosting/quickstart). 
   - Choose `Database` and `Functions`
   - **Do no overwrite existing files if prompted from the cli.**
-5. Update Firebase Functions
+6. Update Firebase Functions
   - Navigate into the /functions directory from the command line, created during `firebase init`
   - Run `npm i --save firebase-function`
   - Run `npm install`
   - Upload the functions `firebase deploy --only functions`
-5. After `firebase init`, test to run the website locally using the firebase cli:
+7. After `firebase init`, test to run the website locally using the firebase cli:
   - `firebase serve`
-6. You can upload it online using the command:
+8. You can upload it online using the command:
   - `firebase deploy`
 
 
