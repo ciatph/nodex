@@ -14,11 +14,11 @@ Also contains NodeJS demos for Firebase Hosting and Cloud Functions.
 
 Basic NodeJS demos contained in `/scripts`. Clone this repository and run `npm init` to download required modules.
 
-1. **index.js**<br>
-  - See `router-simple.js`
-  - Run `npm install`
-  - Run `node index.js`
-  - Open the local nodejs website at `http://localhost:8080`<br>
+1. **index.js**
+	- See `router-simple.js`
+	- Run `npm install`
+	- Run `node index.js`
+	- Open the local nodejs website at `http://localhost:8080`<br>
 
 2. **simple-server.js**<br>
 A very basic http demo for nodeJS. Creates a server and write a plain text output on web.
