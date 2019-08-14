@@ -12,7 +12,8 @@ Also contains NodeJS demos for Firebase Hosting and Cloud Functions.
 
 ## Basic NodeJS Demos
 
-Basic NodeJS demos contained in `/scripts`. Clone this repository and run `npm init` to download required modules.
+Basic NodeJS demos contained in `/scripts` can be run by `node scripts/<SCRIPT_NAME>.js`. <br> 
+Clone this repository and run `npm init` to download required modules. 
 
 1. **index.js**
 	- See `router-simple.js`
@@ -37,6 +38,10 @@ Demo on sending email from nodejs
 
 7. **router-simple.js**<br>
 Creates a server and write an html page from a file. Parses the URL into parts. Implements simple routing: loads html file and external client-side javascript.
+
+8. **childprocess.js**<br>
+Creates a simple http server and executes a blocking windows batch (main.bat) script asynchronously. Data from the bat script is returned as a response from the `/scriptest` route.
+
 
 ## Firebase Hosting and Functions Demo
 
