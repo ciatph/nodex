@@ -50,7 +50,7 @@ const callSpawnAsync = function(batScript) {
 }
 
 /**
- * Windows bat script call from GET
+ * Windows bat script call from GET /scriptest
  */
 http.createServer(function(req, res){
   if (req.url === '/scriptest') {
