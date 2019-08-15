@@ -46,6 +46,11 @@ const callSpawnAsync = function(batScript) {
     script.stdout.on('data', (data) => {
       resolve(data.toString())
     })
+
+    // listen for errors
+    script.stderr.on('data', (data) => {
+      reject(data.toString())
+    })
   })
 }
 
