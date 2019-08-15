@@ -37,20 +37,24 @@ const callSpawnSync = function(batScript) {
  */
 const callSpawnAsync = function(batScript) {
   return new Promise((resolve, reject) => {
-    // Execute the bat script
-    let script = spawn('cmd.exe', ['/c', batScript], {
-      detached: true
-    })
-  
-    // listen for the bat script's completion (data is returned from script)
-    script.stdout.on('data', (data) => {
-      resolve(data.toString())
-    })
+    try {
+      // Execute the bat script
+      let script = spawn('cmd.exe', ['/c', batScript], {
+        detached: true
+      })
 
-    // listen for errors
-    script.stderr.on('data', (data) => {
-      reject(data.toString())
-    })
+      // listen for the bat script's completion (data is returned from script)
+      script.stdout.on('data', (data) => {
+        resolve(data.toString())
+      })
+
+      // listen for errors
+      script.stderr.on('data', (data) => {
+        reject(data.toString())
+      })
+    } catch (error) {
+      reject(error)
+    }
   })
 }
 
