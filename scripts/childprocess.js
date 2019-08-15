@@ -14,7 +14,8 @@ const { spawn, spawnSync } = require('child_process')
  * @param {String} batScript windows .bat script file name (or full path, if placed on other folders)
  * @returns {String} (see main.bat for output)
  */
-const callSpawnSync = function(batScript) {
+const callSpawnSync = async function(batScript) {
+  try {
     // WARNING! Synchronous method here
     // Execute the bat script
     let script = spawnSync('cmd.exe', ['/c', batScript], {
@@ -27,6 +28,9 @@ const callSpawnSync = function(batScript) {
     } else {
       return script.stdout.toString()
     }
+  } catch(error) {
+    return error
+  }
 }
 
 /**
