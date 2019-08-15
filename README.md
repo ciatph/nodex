@@ -1,6 +1,6 @@
 # nodex
 
-Experiments and demos on NodeJS from W3Schools NodeJS [tutorials](https://www.w3schools.com/nodejs/default.asp). Open each file and run from commandline using nodejs.
+Experiments and demos on NodeJS from the W3Schools NodeJS [tutorials](https://www.w3schools.com/nodejs/default.asp). Open each file and run from commandline using nodejs.
 
 Also contains NodeJS demos for Firebase Hosting and Cloud Functions.
 
@@ -96,4 +96,4 @@ Contains definitions for Firebase functions, hosting and rewrites (routing). Aut
 ---
 
 **Date Created:** 20180811<br>
-**Date Modified:** 20180813
+**Date Modified:** 20190816

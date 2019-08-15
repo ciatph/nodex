@@ -14,12 +14,14 @@ const { spawn, spawnSync } = require('child_process')
  * @param {String} batScript windows .bat script file name (or full path, if placed on other folders)
  * @returns {String} (see main.bat for output)
  */
-const callSpawnSync = async function(batScript) {
+const callSpawnSync = function(batScript) {
     // WARNING! Synchronous method here
+    // Execute the bat script
     let script = spawnSync('cmd.exe', ['/c', batScript], {
       detached: true,    
     })
 
+    // data is returned from script
     if (script.stderr.toString() !== '') {
       return script.stderr.toString()
     } else {
@@ -35,10 +37,12 @@ const callSpawnSync = async function(batScript) {
  */
 const callSpawnAsync = function(batScript) {
   return new Promise((resolve, reject) => {
+    // Execute the bat script
     let script = spawn('cmd.exe', ['/c', batScript], {
       detached: true
     })
   
+    // listen for the bat script's completion (data is returned from script)
     script.stdout.on('data', (data) => {
       resolve(data.toString())
     })
