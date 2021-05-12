@@ -24,6 +24,6 @@
   "homepage": "https://github.com/ciatph/nodex#readme",
   "dependencies": {
     "formidable": "^1.2.1",
-    "nodemailer": "^4.6.7"
+    "nodemailer": "^6.4.16"
   }
 }
