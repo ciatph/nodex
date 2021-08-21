@@ -96,4 +96,4 @@ Contains definitions for Firebase functions, hosting and rewrites (routing). Aut
 ---
 
 **Date Created:** 20180811<br>
-**Date Modified:** 20190816
+**Date Modified:** 20210821
